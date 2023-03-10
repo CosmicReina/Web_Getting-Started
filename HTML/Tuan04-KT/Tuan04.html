@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="_1/Banner.png" height="100px">
+            <div id="headerCenter">
+                <div id="headerPadding"></div>
+                <div id="headerCenterTop">
+                    <input type="text" id="headerInput" placeholder="Search the site..." >
+                    <a href="" id="headerSubmit">GO</a>
+                </div>
+                <div id="headerCenterBottom">
+                    <a href="" id="headerTab">Home</a>
+                    <a href="" id="headerTab">Promotion</a>
+                    <a href="" id="headerTab">Gift Baskets</a>
+                    <a href="" id="headerTab">Flower Services</a>
+                    <a href="" id="headerTab">About</a>
+                </div>
+            </div>
+        </header>
+        <div id="content">
+            <div id="contentCenter">
+                <h2 style="margin-left: 5%; font-family: serif; margin-left: 5%; color: #666688;">Why Not Contact Us Today!</h2>
+                <hr style="width: 95%; border: 1px dashed #666688">
+                <div id="contentCenterCenter">
+                    <div id="contentCenterLeft">
+                        <p style="margin-left: 5%; margin-right: 5%; color: #FF0000; text-shadow: 5px 5px 5px #00FF00;;">
+                            For FlowerBox 360 shoppers, that means not only can you send your friends and loved ones the hightest flowers found on online, but that you can do so at a great value.
+                        </p>
+                    </div>
+                    <div id="contentCenterRight">
+                        <h2 style="font-family: serif; color: #666688;">FlowerBox360 Info!</h2>
+                        <hr style="width: 90%; border: 1px dashed #666688">
+                    </div>
+                </div>
+            </div>
+            <div id="contentLeft">
+                <h2 style="font-family: serif; margin-left: 5%; color: #666688;">Discount & Special</h2>
+                <hr style="width: 90%; border: 1px dashed #666688">
+                <img src="_1/Flower.png" id="contentLeftIMG">
+                <p style="margin-left: 5%;margin-right: 5%;">
+                    FlowerBox 360 offers many great discounts throughout the year, from coupons and coupon codes, to promo codes and other savings. We also offer military flower discounts to our wonderful troops!
+                </p>
+                <a href="" id="contentLeftReadmore">Read more>></a>
+            </div>
+        </div>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+<style>
+    #contentCenterRight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+    }
+    #contentCenterLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+    }
+    #contentCenterCenter{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    #contentLeftReadmore{
+        font-weight: bold;
+        color: #294E79;
+        text-decoration: none;
+        margin-right: 5%;
+        text-align: right;
+    }
+    #contentLeftIMG{
+        border-width: 5px;
+        border-style: solid;
+        border-color: #FFFFFF;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #contentCenter{
+        margin-top: 3%;
+        width: 70%;
+        padding-right: 50px;
+
+    }
+    #contentLeft{
+        width: 30%;
+        margin-top: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        background-color: #EEEEEE;
+    }
+    #content{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        height: 500px;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        width: 1440px;
+        height: auto;
+    }
+    #wrapper{
+        border-width: 1px;
+        box-shadow: 0px 10px 10px black;
+        width: 65%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #294E79;
+        width: 100%;
+        height: 100px;
+    }
+    #headerPadding{
+        height: 20%;
+    }
+    #headerCenter{
+        width: 100%;
+        height: 100%;
+    }
+    #headerInput{
+        margin-right: 20px;
+        background-color: #1C3451;
+    }
+    #headerSubmit{
+        padding: 1px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #FFFFFF;
+        margin-right: 20px;
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: #1C3451;
+
+    }
+    #headerCenterTop{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: 50%;
+    }
+    #headerCenterBottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 30%;
+    }
+    #headerTab{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #FFFFFF;
+        text-decoration: none;
+        background-color: #3D73B1;
+    }
+</style>
+</html>
