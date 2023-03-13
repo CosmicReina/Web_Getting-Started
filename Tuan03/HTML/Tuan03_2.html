@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="menu">
+            <img src="../../Tuan01/IMG/Babe.png"  id="menuIMG">
+            <div id="menuCenter">
+                <div id="menuCenterTop">
+                    <div id="menuCenterTopLeft">
+                        <div id="menuTopLabel">Views:</div>
+                        <a href="" id="menuTopTab">Desktop</a>
+                        <a href="" id="menuTopTab">Mobile</a>
+                        <a href="" id="menuTopTab">Prints</a>
+                    </div>
+                    <div id="menuCenterTopRight">
+                        <select name="region" id="regionBox" style="width: 50%;">
+                            <option value="" disabled selected>W3C By Region</option>
+                            <option value="USA">USA</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="China">China</option>
+                            <option value="Vietnam">Vietnam</option>
+                        </select>
+                        <div style="width: 5%;"></div>
+                        <a href="" id="menuTopReg">GO</a>
+                    </div>
+                </div>
+                <div id="menuCenterCenter">
+                    <a href="" id="menuCenterTab">STANDARDS</a>
+                    <a href="" id="menuCenterTab">PARTICIPATE</a>
+                    <a href="" id="menuCenterTab">MEMBERSHIP</a>
+                    <a href="" id="menuCenterTab">ABOUT W3C</a>
+                </div>
+                <div id="menuSearch">
+                    <input type="text" name="search" placeholder="Search">
+                    <div style="width: 1%;"></div>
+                    <a href="" id="menuSearchButton">SEARCH</a>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="contentLeft">
+                <div style="height: 100px;"></div>
+                <div id="contentLeftTab">TECHNICAL REPORTS</div>
+                <div id="contentLeftTab">WEB AND INDUSTRY</div>
+            </div>
+            <div id="contentCenter">
+
+            </div>
+            <div id="contentRight">
+
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #888888;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #wrapper{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #111111;
+    }
+    #menu{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        background-color: #DDDDDD;
+        z-index: 2;
+    }
+    #menuIMG{
+        float: left;
+        box-shadow: 0px 20px 20px black;
+        width: 25%;
+    }
+    #menuCenter{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+    #menuCenterTop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+    }
+    #menuCenterTopLeft{
+        padding-left: 5px;
+        padding-right: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        background-color: #AAAAAA;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+    }
+    #menuCenterTopRight{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 30%;
+    }
+    #menuTopTab{
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #333333;
+        text-decoration: none;
+    }
+    #menuTopTab:hover{
+        color: #DDDDDD;
+        background-color: #111111;
+    }
+    #menuTopReg{
+        background-color: #AAAAAA;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: #111111;
+        text-decoration: none;
+    }
+    #menuTopReg:hover{
+        color: #AAAAAA;
+        background-color: #111111;
+    }
+    #menuCenterCenter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 60%;
+    }
+    #menuCenterTab{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-decoration: none;
+    }
+    #menuCenterTab:hover{
+        border-radius: 10px;
+        background-color: #CCCCCC;
+    }
+    #menuSearch{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 10px;
+    }
+    #menuSearchButton{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #AAAAAA;
+        color: #111111;
+        text-decoration: none;
+    }
+    #content{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        background-color: #FFFFFF;
+        height: 500px;
+        z-index: 1;
+    }
+    #contentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        background-color: #DDDDDD;
+        
+    }
+    #contentLeftTab{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #contentRight{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+    #contentCenter{
+        background-color: #FFFFFF;
+    }
+</style>
+</html>
