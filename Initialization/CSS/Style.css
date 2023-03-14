@@ -1,0 +1,52 @@
+body{
+    background-color: #DDDDDD;
+}
+#banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    
+}
+#firstMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+#emmetLearning{
+    padding: 5px;
+    width: 100%;
+}
+#emmetLearning>h3{
+    background-color: aquamarine;
+}
+#emmetLearning>h6{
+    text-align: right;
+}
+#emmetLearning>div>span{
+    background-color: aquamarine;
+}
+#shortcutLearning{
+    padding: 5px;
+    width: 100%;
+}
+#shortcutLearning>h3{
+    background-color: aquamarine;
+}
+#shortcutLearning>div>span{
+    background-color: aquamarine;
+}
+.grayBorder{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #888888;
+}
