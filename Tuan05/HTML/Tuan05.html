@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="headText">AUTUMN TRAVEL COMPANY</div>
+        </header>
+        <div id="menu">
+            <div id="menuBar">
+                <a href="" id="menuTab">Home</a>
+                <a href="" id="menuTab">About</a>
+                <a href="" id="menuTab">Product</a>
+                <a href="" id="menuTab">Services</a>
+                <a href="" id="menuTab">Order</a>
+            </div>
+        </div>
+        <div style="height: 2px;"></div>
+        <div id="content">
+            <img src="../IMG/Banner.png" width="100%">
+            <div id="contentCenter">
+                <div id="contentLeft">
+                    <div id="contentLeftTop">
+                        <h2 style="color: #AA9127; margin-left: 30px; letter-spacing: 2px;">Sign up for membership benefits</h4>
+                        <p style="color: #AA9127; margin-left: 70px; width: 70%; font-style: italic; font-weight: bold;">Our philisophical vales are transparency, respect, formality and responsibility. Our stimulus is your enthusiasm. Our motto is your satisfaction.</p>
+                    </div>
+                    <div id="contentLeftBot">
+                        <div id="contentLeftBotWrap">
+                            <input type="text" id="inputData" placeholder="Username">
+                            <input type="text" id="inputData" placeholder="E-mail">
+                            <input type="text" id="inputData" placeholder="Password">
+                            <input type="text" id="inputData" placeholder="Retype password">
+                        </div>
+                    </div>
+                    <div id="contentLeftButton">
+                        <input type="submit" id="inputButton" value="SIGN ME UP">
+                    </div>
+                </div>
+                <div id="contentRight">
+                    <div id="contentRightTop">
+                        <h4 style="letter-spacing: 2px; font-weight: bold; color: #222222;">Links</h4>
+                        <ul>
+                            <li><a href="" id="linkTab">Make your Own Tour</a></li>
+                            <li><a href="" id="linkTab">Maldives Tours</a></li>
+                            <li><a href="" id="linkTab">Nature & Adventure</a></li>
+                            <li><a href="" id="linkTab">Readymade Tours</a></li>
+                            <li><a href="" id="linkTab">Europe Tours</a></li>
+                            <li><a href="" id="linkTab">Rusia Tours</a></li>
+                        </ul>
+                    </div>
+                    <div id="contentRightBot">
+                        <h4>More info</h4>
+                        <div>
+                            <img src="../IMG/Leaf.png" style="float:left;" id="leaf">
+                            <p>Our purpose is the client who gives to us the oppotunity to serve and to make know the reality around the world.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <img src="../IMG/Footer.png" width="100%">
+        </footer>
+    </div>
+</body>
+<style>
+    #leaf{
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+    #contentRightTop>ul>li{
+        margin-top: 5px;
+    }
+    #linkTab{
+        color: #945523;
+        text-decoration: none;
+    }
+    #contentLeftBotWrap{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #inputButton{
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-color: transparent;
+        background-color: #7D8103;
+        padding: 10px;
+        color: #FFFFFF;
+    }
+    #inputButton:hover{
+        background-color: #424400;
+        color: #000000;
+    }
+    #contentLeftButton{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    #contentRightTop{
+        width: 80%;
+        height: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #faebd6;
+        border-radius: 20px 20px 0px 0px;
+    }
+    #contentLeftTop{
+        width: 100%;
+        height: 30%;
+    }
+    #inputData{
+        width: 60%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 30px;
+        border: none;
+        border-color: transparent;
+        border-bottom: 1px solid #00000033;
+        letter-spacing: 0.5px;
+    }
+    input:focus{
+        outline: none;
+    }
+    #contentLeftBot{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 70%;
+    }
+    #contentRight{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #contentLeft{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contentCenter{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    #menuBar{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #menuTab{
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #E8B69D;
+        text-decoration: none;
+    }
+    #menu{
+        border-width: 1px;
+        border-style: solid;
+        border-color: #000000;
+        background-color: #FFFFFF;
+        height: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+    #headText{
+        width: 100%;
+        margin-left: 20px;
+        text-shadow: -3px -3px 3px #FFFFFF;
+        font-size: 25px;
+        letter-spacing: 10px;
+        color: #8C7A16;
+        user-select: none;
+    }
+    #wrapper{
+        width: 65%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-style: solid;
+        border-color: #000000;
+        border-width: 2px;
+    }
+    body{
+        width: 1366;
+        height: auto;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #AE4919;
+        height: 75px;
+        width: 100%;
+    }
+    #content{
+        background-color: #FFFFFF;
+        height: auto;
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #000000;
+    }
+    footer{
+        height: auto;
+        width: 100%;
+    }
+</style>
+</html>
