@@ -7,62 +7,89 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../CSS/Tuan06.css">
 </head>
+<script src="../JS/Tuan06.js"></script>
 <body>
-    <div id="form">
+    <form id="form">
+        <div id="formSelfTitle">
+            <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+        </div>
+        <div class="formDetails">
+            <div class="formLabel">
+                <label for="name">Tên đăng nhập: </label>
+            </div>
+            <div class="formInput">
+                <input type="text" name="name" id="accInput" placeholder="txtDN" onblur="checkAccountName();">
+            </div>
+            <div class="formError" id="errAcc">* Bắt buộc</div>
+            <div class="formLabel">
+                <label for="name">Tên đăng nhập: </label>
+            </div>
+            <div class="formInput">
+                <input type="password" name="name" id="passInput" placeholder="txtMK" onblur="checkPassword();">
+            </div>
+            <div class="formError" id="errPw">* Bắt buộc</div>
+            <div class="formLabel">
+                <label for="name">Tên đăng nhập: </label>
+            </div>
+            <div class="formInput">
+                <input type="password" name="name" id="passReInput" placeholder="txtXNMK" onblur="recheckPassword()">
+            </div>
+            <div class="formError" id="errRePw">* Bắt buộc</div>
+        </div>
         <div id="formSelfTitle">
             <h3>THÔNG TIN CÁ NHÂN</h3>
         </div>
-        <div id="formDetails">
-            <div id="formLabel">
+        <div class="formDetails">
+            <div class="formLabel">
                 <label for="name">Họ và tên: </label>
             </div>
-            <div id="formInput">
+            <div class="formInput">
                 <input type="text" name="name" id="nameInput" placeholder="Họ và tên">
             </div>
-            <div id="formError">* Bắt buộc</div>
-            <div id="formLabel">
+            <div class="formError">* Bắt buộc</div>
+            <div class="formLabel">
                 <label for="name">Ngày sinh: </label>
             </div>
-            <div id="formInput">
+            <div class="formInput">
                 <input type="date" name="name" id="dateInput" placeholder="Ngày sinh">
             </div>
-            <div id="formError">* Bắt buộc</div>
-            <div id="formLabel">
+            <div class="formError">* Bắt buộc</div>
+            <div class="formLabel">
                 <label for="name">Giới tinh: </label>
             </div>
-            <div id="formInput">
+            <div class="formInput">
                 <input type="radio" value="Nam" name="gioiTinh">
                 <label>Nam</label>
                 <input type="radio" value="Nữ" name="gioiTinh">
                 <label>Nữ</label>
             </div>
-            <div id="formError">* Bắt buộc</div>
-            <div id="formLabel">
+            <div class="formError">* Bắt buộc</div>
+            <div class="formLabel">
                 <label for="name">Địa chỉ: </label>
             </div>
-            <div id="formInput">
+            <div class="formInput">
                 <input type="text" name="name" id="addressInput" placeholder="Địa chỉ">
             </div>
-            <div id="formError">* Bắt buộc</div>
-            <div id="formLabel">
+            <div class="formError">* Bắt buộc</div>
+            <div class="formLabel">
                 <label for="name">Số điện thoại: </label>
             </div>
-            <div id="formInput">
+            <div class="formInput">
                 <input type="text" name="name" id="phoneInput" placeholder="Số điện thoại">
             </div>
-            <div id="formError">* Bắt buộc</div>
-            <div id="formLabel">
+            <div class="formError">* Bắt buộc</div>
+            <div class="formLabel">
                 <label for="name">Địa chỉ email: </label>
             </div>
-            <div id="formInput">
+            <div class="formInput">
                 <input type="text" name="name" id="emailInput" placeholder="Địa chỉ email">
             </div>
-            <div id="formError">* Bắt buộc</div>
+            <div class="formError">* Bắt buộc</div>
         </div>
-        <div id="formButton">
-            <input type="submit" value="Đăng ký" style="margin-right: 5px;" id="buttonSubmit">
-            <input type="reset" value="Hủy" style="margin-left: 5px;" id="buttonReset">
+        <div class="formButton">
+            <input type="submit" value="Đăng ký" style="margin-right: 5px;" id="buttonSubmit" onclick="submit();">
+            <input type="reset" value="Hủy" style="margin-left: 5px;" id="buttonReset" onclick="resetForm();">
         </div>
-    </div>
+    </form>
 </body>
 </html>
