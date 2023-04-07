@@ -22,14 +22,14 @@
             </div>
             <div class="formError" id="errAcc">* Bắt buộc</div>
             <div class="formLabel">
-                <label for="name">Tên đăng nhập: </label>
+                <label for="name">Mật khẩu: </label>
             </div>
             <div class="formInput">
                 <input type="password" name="name" id="passInput" placeholder="txtMK" onblur="checkPassword();">
             </div>
             <div class="formError" id="errPw">* Bắt buộc</div>
             <div class="formLabel">
-                <label for="name">Tên đăng nhập: </label>
+                <label for="name">Nhập lại mật khẩu: </label>
             </div>
             <div class="formInput">
                 <input type="password" name="name" id="passReInput" placeholder="txtXNMK" onblur="recheckPassword()">
@@ -44,47 +44,47 @@
                 <label for="name">Họ và tên: </label>
             </div>
             <div class="formInput">
-                <input type="text" name="name" id="nameInput" placeholder="Họ và tên">
+                <input type="text" name="name" id="nameInput" placeholder="Họ và tên" onblur="checkName()">
             </div>
-            <div class="formError">* Bắt buộc</div>
+            <div class="formError" id="errName">* Bắt buộc</div>
             <div class="formLabel">
                 <label for="name">Ngày sinh: </label>
             </div>
             <div class="formInput">
-                <input type="date" name="name" id="dateInput" placeholder="Ngày sinh">
+                <input type="date" name="name" id="dateInput" placeholder="Ngày sinh" onchange="checkBirthday()">
             </div>
-            <div class="formError">* Bắt buộc</div>
+            <div class="formError" id="errDate">* Bắt buộc</div>
             <div class="formLabel">
                 <label for="name">Giới tinh: </label>
             </div>
             <div class="formInput">
-                <input type="radio" value="Nam" name="gioiTinh">
+                <input type="radio" value="Nam" name="gioiTinh" id="radioNam" onchange="checkGender()">
                 <label>Nam</label>
-                <input type="radio" value="Nữ" name="gioiTinh">
+                <input type="radio" value="Nữ" name="gioiTinh" id="radioNu" onchange="checkGender()">
                 <label>Nữ</label>
             </div>
-            <div class="formError">* Bắt buộc</div>
+            <div class="formError" id="errGender">* Bắt buộc</div>
             <div class="formLabel">
                 <label for="name">Địa chỉ: </label>
             </div>
             <div class="formInput">
-                <input type="text" name="name" id="addressInput" placeholder="Địa chỉ">
+                <input type="text" name="name" id="addressInput" placeholder="Địa chỉ" onblur="checkAddress()">
             </div>
-            <div class="formError">* Bắt buộc</div>
+            <div class="formError" id="errAddress">* Bắt buộc</div>
             <div class="formLabel">
                 <label for="name">Số điện thoại: </label>
             </div>
             <div class="formInput">
-                <input type="text" name="name" id="phoneInput" placeholder="Số điện thoại">
+                <input type="text" name="name" id="phoneInput" placeholder="Số điện thoại" onblur="checkPhoneNumber()">
             </div>
-            <div class="formError">* Bắt buộc</div>
+            <div class="formError" id="errPhone">* Bắt buộc</div>
             <div class="formLabel">
                 <label for="name">Địa chỉ email: </label>
             </div>
             <div class="formInput">
-                <input type="text" name="name" id="emailInput" placeholder="Địa chỉ email">
+                <input type="text" name="name" id="emailInput" placeholder="Địa chỉ email" onblur="checkEmail()">
             </div>
-            <div class="formError">* Bắt buộc</div>
+            <div class="formError" id="errEmail">* Bắt buộc</div>
         </div>
         <div class="formButton">
             <input type="submit" value="Đăng ký" style="margin-right: 5px;" id="buttonSubmit" onclick="submit();">
