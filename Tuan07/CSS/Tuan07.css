@@ -3,5 +3,59 @@ body{
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.container{
+    width: 100%;
+    height: auto;
+    margin: 0px;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container>div{
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+.bai1{
+    width: 100%;
+}
+.borderImage{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 10px;
+}
+.borderImage img{
+    width: 75%;
+}
+.bai2{
+    width: 100%;
+}
+.alertItem{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.alertList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.bai3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.bai4{
+    width: 100%;
 }
