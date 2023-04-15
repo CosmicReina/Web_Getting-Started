@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bootstrap Learning</title>
     <!--Thư viện-->
     <link rel="stylesheet" href="../LIB/CSS/bootstrap.min.css">
     <script src="../LIB/JS/jquery-3.6.4.min.js"></script>
     <script src="../LIB/JS/bootstrap.bundle.js"></script>
     <script>
         $(document).ready(function(){
-            
+            $("#btnLogin").click(function(){
+                alert("Đăng nhập");
+            });
+            $("#btnNewTour").click(function(){
+                $("#newTourModal").modal();
+            });
         });
     </script>
 </head>
@@ -25,8 +30,8 @@
       <div class="row">
         <div class="col-12">
           <div class="btn-group">
-            <button class="btn text-secondary">Đăng nhập</button>
-            <button class="btn text-secondary">Mở tour mới</button>
+            <button class="btn text-secondary" id="btnLogin">Đăng nhập</button>
+            <button class="btn text-secondary" id="btnNewTour">Mở tour mới</button>
           </div>
         </div>
       </div>
@@ -75,6 +80,47 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Save changes</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="modal fade" role="dialog" id="newTourModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title text-center w-100">THÔNG TIN TOUR</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <div class="row mb-4">
+                  <div class="col-4 text-right align-self-center">Mã Tour:</div>
+                  <div class="col-8"><input type="text" class="form-control"></div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-4 text-right align-self-center">Hành trình:</div>
+                  <div class="col-8"><input type="text" class="form-control"></div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-4 text-right align-self-center">Ngày khởi hành:</div>
+                  <div class="col-8"><input type="date" class="form-control"></div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-4 text-right align-self-center">Thời gian:</div>
+                  <div class="col-8"><input type="text" class="form-control"></div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-4 text-right align-self-center">Giá Tour:</div>
+                  <div class="col-8"><input type="text" class="form-control"></div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-4 text-right align-self-center">Ảnh đại diện:</div>
+                  <div class="col-8"><input type="file" class="form-control"></div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success w-100" data-dismiss="modal">Lưu</button>
               </div>
             </div>
           </div>
