@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Thư viện-->
+    <link rel="stylesheet" href="../LIB/CSS/bootstrap.min.css">
+    <script src="../LIB/JS/jquery-3.6.4.min.js"></script>
+    <script src="../LIB/JS/bootstrap.bundle.js"></script>
+</head>
+<script>
+    var tienTrangPhuc = 0;
+    $(document).ready(function(){
+        $("#btnDangNhap").click(function(){
+            alert("Đăng Nhập");
+        });
+        $("#btnDangKy").click(function(){
+            $("#modal").modal();
+        });
+        $("#txtMKH").blur(function(){
+            kiemTraMaKhachHang();
+        });
+        $("#txtHoTen").blur(function(){
+            kiemTraHoTen();
+        });
+        $("#txtDiaChi").blur(function(){
+            kiemTraDiaChi();
+        });
+        $("#btnSubmit").click(function(){
+            if(kiemTraMaKhachHang() && kiemTraHoTen() && kiemTraDiaChi()){
+                themKhachHang();
+            }
+            else{
+                alert("Dữ liệu không hợp lệ");
+            }
+        })
+        $("#chkAoQuanBoi").change(function(){
+            capNhatGiaTien();
+        })
+        $("#chkPhao").change(function(){
+            capNhatGiaTien();
+        })
+        $("#chkKinhBoi").change(function(){
+            capNhatGiaTien();
+        })
+    })
+    function kiemTraMaKhachHang(){
+        var maKhachHang = Number(document.getElementById("txtMKH").value);
+        if(isNaN(maKhachHang)){
+            var text = document.getElementById("errMKH");
+            text.innerHTML = "Mã Khách Hàng Không Hợp Lệ";
+            text.style.color = "red";
+            return false;
+        }
+        if(maKhachHang < 0){
+            var text = document.getElementById("errMKH");
+            text.innerHTML = "Mã Khách Hàng Không Hợp Lệ";
+            text.style.color = "red";
+            return false;
+        }
+        var text = document.getElementById("errMKH");
+        text.innerHTML = "Hợp Lệ";
+        text.style.color = "green";
+        return true;
+    }
+    function kiemTraHoTen(){
+        var hoTen = document.getElementById("txtHoTen").value;
+        var regex = /^([A-Z][a-z]+)( [A-Z][a-z]+)+/;
+        if(!regex.test(hoTen)){
+            var text = document.getElementById("errHoTen");
+            text.innerHTML = "Họ Tên Không Hợp Lệ";
+            text.style.color = "red";
+            return false;
+        }
+        var text = document.getElementById("errHoTen");
+        text.innerHTML = "Hợp Lệ";
+        text.style.color = "green";
+        return true;
+    }
+    function kiemTraDiaChi(){
+        var diaChi = document.getElementById("txtDiaChi").value;
+        var regex = /^([A-Z][a-z]+)( [A-Z][a-z]+)+/;
+        if(!regex.test(diaChi)){
+            var text = document.getElementById("errDiaChi");
+            text.innerHTML = "Địa chỉ Không Hợp Lệ";
+            text.style.color = "red";
+            return false;
+        }
+        var text = document.getElementById("errDiaChi");
+        text.innerHTML = "Hợp Lệ";
+        text.style.color = "green";
+        return true;
+    }
+    function themKhachHang(){
+        var table = document.getElementById("table");
+            var row = table.insertRow(-1);
+
+            var c1 = row.insertCell(0);
+            var c2 = row.insertCell(1);
+            var c3 = row.insertCell(2);
+            var c4 = row.insertCell(3);
+            var c5 = row.insertCell(4);
+            var c6 = row.insertCell(5);
+            var c7 = row.insertCell(6);
+
+            var rowLength = table.rows.length;
+
+            var tienDichVu = 0;
+            var tienTrangPhuc = 0;
+
+            c1.innerText = rowLength;
+            c2.innerText = document.getElementById("txtMKH").value;
+            c3.innerText = document.getElementById("txtHoTen").value;
+            c4.innerText = document.getElementById("txtDiaChi").value;
+            c5.innerText = tienDichVu;
+            c6.innerText = tienTrangPhuc;
+            c7.innerText = tienDichVu + tienTrangPhuc;
+    }
+    function capNhatGiaTien(){
+        tienTrangPhuc = 0;
+        if($("#chkAoQuanBoi").is(":checked")){
+            tienTrangPhuc += 30000;
+            console.log(tienTrangPhuc);
+        }
+        if($("#chkPhao").is(":checked")){
+            tienTrangPhuc += 20000;
+            console.log(tienTrangPhuc);
+        }
+        if($("#chkKinhBoi").is(":checked")){
+            tienTrangPhuc += 10000;
+            console.log(tienTrangPhuc);
+        }
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="row"><img src="../IMG/Banner.png" width="100%"></div>
+        <div class="row mt-3">
+            <input type="button" value="Đăng Nhập" class="btn btn-light border" id="btnDangNhap">
+            <input type="button" value="Đăng Ký" class="btn btn-light border ml-1" id="btnDangKy">
+        </div>
+        <div class="row mt-3">
+            <div class="col-4"><img src="../IMG/Babe.png" width="100%"></div>
+            <div class="col-8">
+                <table class="table" id="table">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã Sinh Viên</th>
+                        <th>Họ Tên</th>
+                        <th>Địa chỉ</th>
+                        <th>Tiền Dịch Vụ</th>
+                        <th>Tiền Trang Phục</th>
+                        <th>Thành Tiền</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>123456789</td>
+                        <td>Tran Anh</td>
+                        <td>Quang Ngai</td>
+                        <td>30000</td>
+                        <td>10000</td>
+                        <td>40000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal fade" role="dialog" id="modal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            MODAL VALIDATION
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-center">
+                                        Mã Khách hàng:
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="Nhập mã khách hàng" id="txtMKH">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 ml-3">
+                                    <label id="errMKH">*</label>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-center">
+                                        Họ tên:
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="Nhập họ tên" id="txtHoTen">
+                                    </div>
+                                </div>
+                                <div class="row mt- ml-3">
+                                    <label id="errHoTen">*</label>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-center">
+                                        Địa chỉ:
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="Nhập địa chỉ" id="txtDiaChi">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 ml-3">
+                                    <label id="errDiaChi">*</label>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-center">
+                                        Dịch vụ:
+                                    </div>
+                                    <div class="col-8">
+                                        <select class="form-control">
+                                            <option selected></option>
+                                            <option value="Boi">Bơi</option>
+                                            <option value="Gym">Gym</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-center">
+                                        Giá:
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" value="0" disabled id="txtGia">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-start">
+                                        Đồ dùng:
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row mt-2"><input type="checkbox" value="" id="chkAoQuanBoi"><div class="align-self-center ml-2">Áo quần bơi</div></div>
+                                        <div class="row mt-2"><input type="checkbox" value="" id="chkPhao"><div class="align-self-center ml-2">Phao</div></div>
+                                        <div class="row mt-2"><input type="checkbox" value="" id="chkKinhBoi"><div class="align-self-center ml-2">Kính bơi</div></div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-center">
+                                        Thành tiền:
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" value="0" disabled id="txtThanhTien">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-center">
+                                        Giảm trừ:
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="radio" name="day" id=""><span class="align-self-center ml-2">Ngày thường</span>
+                                        <input type="radio" name="day" id=""><span class="align-self-center ml-2">Cuối tuần</span>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 align-self-center">
+                                        Tổng tiền:
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="" disabled>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <input type="button" value="Submit" class="btn btn-success col-6" id="btnSubmit">
+                                    <input type="reset" value="Reset" class="btn btn-danger col-6" id="btnReset">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            CHUONG TRINH
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
